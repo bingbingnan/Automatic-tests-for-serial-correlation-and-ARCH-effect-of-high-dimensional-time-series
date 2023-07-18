@@ -1,37 +1,37 @@
 
-米=1010
-n=30;p=0.6*n30;p=0.6*n
+m=10
+n=30;p=0.6*n
 
-N<-50005000
-tnm.all<-NULLNULL
-wnm.all<-NULLNULL
-max1.all<-NULLNULL
-max2.all<-NULLNULL
+N<-5000
+tnm.all<-NULL
+wnm.all<-NULL
+max1.all<-NULL
+max2.all<-NULL
 
 N1<-p*p
-N2<-下限(p^2/n)2/n)
-weizhi<-sample(1:N1, N2, 替换 = FALSE)1:N1, N2, replace = FALSE)
-水吉术<-runif(N2,-0.95,0.95)0.95,0.95)
-相亮<-rep(0,N1)0,N1)
-相量[weizhi]<-遂记数;相量
-fai<-矩阵(相亮,p,p)
-摘要（fai）
+N2<-floor(p^2/n)
+weizhi<-sample(1:N1, N2, replace = FALSE)
+suijishu<-runif(N2,-0.95,0.95)
+xiangliang<-rep(0,N1)
+xiangliang[weizhi]<-suijishu;xiangliang
+fai<-matrix(xiangliang,p,p)
 
-forfor( ii in  1 :N){ in  1 :N){
-  猫（“二”，二）" ii" , ii)
-  if (ii==N){ 猫( " \n " ) } if (ii== N){ cat( " \n " ) }
 
-  xt.2<-NULLNULL
-  for (i in  1 :n){ for (i in  1 :n){
-    S<- 矩阵( 0 ,p,p) 0 ,p,p)
-    for (i in  1 :p) { for (i in  1 :p) {
-      for (j in 1:p) {for (j in 1:p) {
-        S[i,j]=0.995^(abs(ij))0.995^(abs(i-j))
+for( ii in 1:N){
+  cat( "ii", ii)
+  if(ii== N){ cat("\n") }
+
+  xt.2<-NULL
+  for(i in 1:n){
+    S<-matrix(0,p,p)
+    for (i in 1:p) {
+      for (j in 1:p) {
+        S[i,j]=0.995^(abs(i-j))
       }
     }
     A<-sqrt(S)
-    et<-rnorm(p, 均值=0, sd=1)0, sd=1)
-    xt2<-A%*%as.matrix(et)
+    et<-rnorm(p, mean=0, sd=1)
+    xt2<-A%*%as.matrix(et) 
     xt.2<-cbind(xt.2,xt2)
   }
   
